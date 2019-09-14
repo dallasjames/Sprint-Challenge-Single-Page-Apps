@@ -15,12 +15,11 @@ import EpisodeList from "./EpisodeList";
 // https://react.semantic-ui.com/collections/breadcrumb/
 
 export default function TabNav() {
-    const tabs =[
-        {menuItem: Home, render:() => <Tab.Pane><WelcomePage/></Tab.Pane>},
-        {menuItem: Characters, render:() => <Tab.Pane><CharacterList/></Tab.Pane>},
-        {menuItem: Locations, render:() => <Tab.Pane><LocationsList/></Tab.Pane>},
-        {menuItem: Episodes, render:() => <Tab.Pane><EpisodeList/></Tab.Pane>}
+    const panes =[
+        {menuItem: 'Home', render:() => <Tab.Pane as={NavLink} to='/'><WelcomePage/></Tab.Pane>},
+        {menuItem: 'Characters', render:() => <Tab.Pane as={NavLink} to='/characters'><CharacterList/></Tab.Pane>},
+        {menuItem: 'Locations', render:() => <Tab.Pane as={NavLink} to='/locations'><LocationsList/></Tab.Pane>},
+        {menuItem: 'Episodes', render:() => <Tab.Pane as={NavLink} to='/episodes'><EpisodeList/></Tab.Pane>}
     ]
-    const Tabs = () => <Tab panes={tabs} />
-    return <Tabs />
+        return  <Tab panes={panes}/>
 };
