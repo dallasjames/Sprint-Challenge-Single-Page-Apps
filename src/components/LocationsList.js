@@ -18,7 +18,7 @@ export default function LocationsList() {
     }, location, setLocation)
 
     return (
-        <>
+        <div className='character-card'>
         {Array.from(location).map(place => (
             <LocationCard key={place.id}
             name={place.name}
@@ -27,6 +27,6 @@ export default function LocationsList() {
             residents={place.residents.length}
             />
         ))}
-        </>
+        </div>
     )
 }

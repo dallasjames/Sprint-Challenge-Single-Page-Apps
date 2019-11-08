@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, Image } from 'semantic-ui-react';
-import { tsPropertySignature } from "@babel/types";
 
 export default function CharacterCard(props) {
   return (
