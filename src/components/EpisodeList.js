@@ -18,14 +18,14 @@ export default function EpisodeList() {
     }, episode, setEpisode)
 
     return (
-        <>
+        <div className='character-card'>
         {Array.from(episode).map(asdf => (
             <EpisodeCard key={asdf.id}
             episode={asdf.episode}
             name={asdf.name}
-            date={asdf.airDate}
+            date={asdf.air_date}
             />
         ))}
-        </>
+        </div>
     )
 }

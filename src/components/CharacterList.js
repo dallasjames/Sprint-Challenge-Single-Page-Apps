@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import { resetWarningCache } from "prop-types";
 import CharacterCard from './CharacterCard';
 
 export default function CharacterList() {
@@ -20,7 +19,7 @@ export default function CharacterList() {
   }, characters, setCharacters);
 
   return (
-    <div>
+    <div className='character-card'>
       {Array.from(characters).map(character => (
         <CharacterCard key={character.id}
         characterImg={character.image}
